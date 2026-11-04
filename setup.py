@@ -11,7 +11,7 @@ setup(
     version="0.1.0",
     description="CraftBeerPi 4 step that holds whirlpool temperature with the HLT PID",
     author="cbpi4-WhirlpoolHold",
-    url="https://github.com/PiBrewing/craftbeerpi4",
+    url="https://github.com/braubunker/cbpi4-WhirlpoolHold",
     license="GPLv3",
     include_package_data=True,
     package_data={"cbpi4_WhirlpoolHold": ["config.yaml"]},

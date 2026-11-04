@@ -46,16 +46,19 @@ Ohne Umwälzung sieht der PID nur seinen eigenen Fühler. Die Pumpe muss laufen,
 
 ## Installation
 
-Auf dem Raspberry Pi, im virtuellen Environment von CraftBeerPi 4:
+Auf dem Raspberry Pi, im Environment von CraftBeerPi 4:
+
+```bash
+pipx runpip cbpi4 install https://github.com/braubunker/cbpi4-WhirlpoolHold/archive/refs/heads/main.zip
+sudo systemctl restart craftbeerpi
+```
+
+`pipx` ohne `sudo` ausführen. Beim Aktualisieren die Version in `setup.py` anheben und denselben Befehl mit `--upgrade` wiederholen.
+
+Zum Entwickeln im ausgecheckten Ordner:
 
 ```bash
 pipx runpip cbpi4 install -e /pfad/zu/diesem/repo
-```
-
-Ohne pipx, im selben Environment, in dem `cbpi` läuft:
-
-```bash
-pip install -e /pfad/zu/diesem/repo
 ```
 
 Danach CraftBeerPi neu starten. `cbpi add` ist in aktuellen Versionen nicht mehr nötig. Das Paket heisst `cbpi4-WhirlpoolHold` und wird beim Start geladen, weil der Modulname mit `cbpi` beginnt.
